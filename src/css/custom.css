@@ -1,0 +1,31 @@
+/* Custom checkbox styling */
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: currentColor;
+  border-color: currentColor;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 0.4375rem;
+  top: 0.125rem;
+  width: 0.375rem;
+  height: 0.75rem;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
